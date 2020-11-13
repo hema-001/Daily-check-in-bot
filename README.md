@@ -56,7 +56,8 @@ Or the web driver file name in case the file is in the same working directory.
 
 #### All releases 
 
-* [MS edge chromium-latest](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0) 
+* [MS edge chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
+* [MS edge chromium-latest](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
 
 ![GitHub](https://img.shields.io/github/license/hema-001/Daily-check-in-bot)
 
