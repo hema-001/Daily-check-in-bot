@@ -1,6 +1,6 @@
 # Daily check-in bot
 
-build badge
+![GitHub pull request check contexts](https://img.shields.io/github/status/contexts/pulls/hema-001/Daily-check-in-bot/1)
 
 The daily check-in platform is a countermeasure conducted by ZJNU following the events of COVID-19 to observe their students' daily health condition by requiring them to complete an online survey. However, the daily check-in bot is a counter-countermeasure for the cumbersome process of checking-in daily by utilizing [selenium](https://www.selenium.dev/) framework.
 
