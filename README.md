@@ -14,6 +14,7 @@ The daily check-in platform is a countermeasure conducted by ZJNU following the 
   - [ ] Support for Mac OS
   - [ ] Supoort for Linux
   - [ ] Support for different browsers
+  - [ ] Write more documentation
 
 # Requirements
 In order to run this bot you'll need the following:
