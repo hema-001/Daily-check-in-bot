@@ -52,9 +52,11 @@ Or the web driver file name in case the file is in the same working directory.
 > python usernameStr passStr webDriverFile.exe
 ```
 ### Releases 
-Latest release
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/hema-001/Daily-check-in-bot)
-All releases
-* [MS edge chromium-latest](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/hema-001/Daily-check-in-bot) 
+
+#### All releases 
+
+* [MS edge chromium-latest](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0) 
+
 ![GitHub](https://img.shields.io/github/license/hema-001/Daily-check-in-bot)
 
