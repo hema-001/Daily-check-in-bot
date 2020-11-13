@@ -2,25 +2,20 @@
 
 build badge
 
-****
 The daily check-in platform is a countermeasure conducted by ZJNU following the events of COVID-19 to observe their students' daily health condition by requiring them to complete an online survey. However, the daily check-in bot is a counter-countermeasure for the cumbersome process of checking-in daily by utilizing [selenium](https://www.selenium.dev/) framework.
 
 # Features!
-****
   - One command, automated check-in process
   - Batch file to create Windows task scheduler
 
 # New features!
-****
 **TBA**
 # To do
-****
   - [ ] Support for Mac OS
   - [ ] Supoort for Linux
   - [ ] Support for different browsers
 
 # Requirements
-****
 In order to run this bot you'll need the following:
 > - [Python](https://www.python.org/downloads/) 2.7 or higher
 > - [Install selenium package for python](#Install-selenium-package-for-python)
@@ -28,15 +23,11 @@ In order to run this bot you'll need the following:
 > - Web browser according to the desired web driver manager
 
 ## Install selenium package for python
-****
 After you have successfully installed Python on your machine, you should be able to run the following command on your Windows command prompet:
 ```sh
 > pip install selenium
 ```
 ## Web driver manager
-****
-
-
 ##### Before you download
 make sure to find your correct build number: 
 - **Launch** Microsoft Edge. 
@@ -48,7 +39,6 @@ Download the correct [Microsoft WebDriver version](https://developer.microsoft.c
 Having the correct version of WebDriver for your build ensures it runs correctly.
 
 # Running
-****
 Running the script itself requires three arguments, username, password, and the web driver path/name. The syntax is as follows:
 ```
 python [username] [password] [path]
