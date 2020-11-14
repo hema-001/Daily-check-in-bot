@@ -30,7 +30,7 @@ After you have successfully installed Python on your machine, you should be able
 ```
 ## Web driver manager
 ##### Before you download
-make sure to find your correct build number: 
+make sure to find your correct MS edge chromium browser build number: 
 - **Launch** Microsoft Edge. 
 - **Open** the Settings and more (*"..." menu on top right cornenr of the browser*)
 - **Choose** Help and feedback 
