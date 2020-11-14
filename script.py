@@ -1,6 +1,6 @@
 """
 File: script.py
-Version: 0.1.0 (MS edge chromium)
+Version: 0.1.2 (MS edge chromium)
 Homepage: https://github.com/hema-001/Daily-check-in-bot
 
 This script automate the daily check-in process conducted by ZJNU students 
@@ -34,11 +34,11 @@ from msedge.selenium_tools import Edge, EdgeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoSuchElementException, TimeoutException
+from selenium.common.exceptions import NoSuchElementException, TimeoutException, WebDriverException
 
-if len(sys.argv) <= 2:
+if len(sys.argv) <= 3:
 	
-	print('Invalid input: the command must have the following args: python script.py <username> <password> ')
+	print('Invalid input: the command must have the following args: python script.py <username> <password> <driverPath>')
 	exit()
 
 else:
@@ -47,10 +47,17 @@ else:
 	passwordStr = sys.argv[2]
 	driverPath = sys.argv[3]
 
-	# Launch Microsoft Edge (Chromium)
-	options = EdgeOptions()
-	options.use_chromium = True
-	browser = Edge(driverPath, options = options)
+	try:
+		# Launch Microsoft Edge (Chromium)
+		options = EdgeOptions()
+		options.use_chromium = True
+		browser = Edge(driverPath, options = options)
+	
+	## If the user provides a wrong webdriver name.
+	except WebDriverException as err:
+		if "executable needs to be in PATH" in str(err):
+			print("\"{}\" doesn't exists, make sure you have typed the correct web driver name or path".format(driverPath))
+		exit()
 	
 	##enter the daily check-in website
 	browser.get(('http://zyt.zjnu.edu.cn/H5/Login.aspx?op=phone_html5'))
