@@ -44,7 +44,7 @@ Running the script itself requires three arguments, username, password, and the 
 ```
 python [username] [password] [path]
 ```
-The username is the student ID, password is student's passport, path is the absolute path of the web driver file (if the file is in a different location than the script, e.g., D:\dir1\webDriverFile.exe and the script in D:\dir2\script.py),
+Path is the absolute path of the web driver file (if the file is in a different location than the script, e.g., D:\dir1\webDriverFile.exe and the script in D:\dir2\script.py),
 ```sh
 > python usernameStr passStr D:\dir1\webDriverFile.exe
 ```
