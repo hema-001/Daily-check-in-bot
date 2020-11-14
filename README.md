@@ -69,6 +69,7 @@ Only providing username and password to a task schedluer program is much more co
 
 * [Daily check-in botv0.1.0_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
 * [Daily check-in botv0.1.1_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
+* [Daily check-in botv0.1.2_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.2)
 
 
 ## Report a bug
