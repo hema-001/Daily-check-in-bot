@@ -1,6 +1,6 @@
 # Daily check-in bot
 
-![GitHub pull request check contexts](https://img.shields.io/github/status/contexts/pulls/hema-001/Daily-check-in-bot/2)
+![GitHub pull request check contexts](https://img.shields.io/github/status/contexts/pulls/hema-001/Daily-check-in-bot/2) ![GitHub](https://img.shields.io/github/license/hema-001/Daily-check-in-bot) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/hema-001/Daily-check-in-bot) 
 
 The daily check-in platform is a countermeasure conducted by ZJNU following the events of COVID-19 to observe their students' daily health condition by requiring them to complete an online survey. However, the **daily check-in bot** is a counter-countermeasure for the cumbersome process of checking-in daily by utilizing [selenium](https://www.selenium.dev/) framework.
 
@@ -45,7 +45,7 @@ Running the script itself requires three arguments, `username`, `password`, and 
 ```
 python [username] [password] [driverPath]
 ```
-`driverPath` is the absolute path of the web driver file (if the file is in a different location than the script, e.g., D:\dir1\webDriverFile.exe and the script in D:\dir2\script.py),
+`driverPath` is the absolute path of the web driver file (if the web driver file in a different location than the script, e.g., `D:\dir1\webDriverFile.exe` and the script in `D:\dir2\script.py`),
 ```sh
 > python usernameStr passStr D:\dir1\webDriverFile.exe
 ```
@@ -55,7 +55,7 @@ Or the web driver file name, in case the file is in the same working directory.
 ```
 #### Running the batch
 Runnig the batch file requires only two arguments, `username` and `password`.
-For the third argument `driverPath`, the batch file is going to locate the web driver on the same working directory(Make sure to put the web driver executable in the same working directory) and provide it in running the script command arguments.
+For the third argument `driverPath`, the batch file is going to locate the web driver in the same working directory (Make sure to put the web driver executable in the same working directory) and provide it in running the script command arguments.
 
 You can run the script file as follows:
 ```sh
@@ -65,12 +65,11 @@ You can run the script file as follows:
 The reason behind this design is that we want to enable the user to set a task scheduler using the batch file with as less overhead as possible.
 Only providing username and password to a task schedluer program is much more convenient than providing a path to a file as well. By letting the batch file do the cumbersome task of providing a correct absolute file path, we can guarantee a minimum error levels that gives the user less problems while setting the daily task.
 ### Releases 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/hema-001/Daily-check-in-bot) 
-
 #### All releases 
 
-* [MS edge chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
-* [MS edge chromium-latest](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
+* [Daily check-in botv0.1.0_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
+* [Daily check-in botv0.1.1_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
 
-![GitHub](https://img.shields.io/github/license/hema-001/Daily-check-in-bot)
 
+## Report a bug
+See the following [issue](https://github.com/hema-001/Daily-check-in-bot/issues/3).
