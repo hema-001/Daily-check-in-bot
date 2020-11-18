@@ -1,7 +1,7 @@
 @echo off
 
 :: File: do_daily_check_in.bat 
-:: Version: 0.3.0 
+:: Version: 0.2.0 
 :: This batch file is used in case you want to set a windows task scheduler
 :: for the daily check-in bot that automatically runs the bot for you
 :: in the desired time.
