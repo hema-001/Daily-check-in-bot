@@ -1,6 +1,6 @@
 """
 File: script.py
-Version: 0.3.0
+Version: 0.2.0
 Homepage: https://github.com/hema-001/Daily-check-in-bot
 
 This script automate the daily check-in process conducted by ZJNU students 
