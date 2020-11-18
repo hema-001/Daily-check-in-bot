@@ -1,6 +1,6 @@
 """
 File: script.py
-Version: 0.1.2 (MS edge chromium)
+Version: 0.3.0
 Homepage: https://github.com/hema-001/Daily-check-in-bot
 
 This script automate the daily check-in process conducted by ZJNU students 
@@ -30,6 +30,7 @@ good health. Otherwise, the student should fill in the form according to his
 current health condition and traveling situation.
 """
 import sys
+from selenium import webdriver
 from msedge.selenium_tools import Edge, EdgeOptions
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -45,19 +46,32 @@ else:
 	
 	usernameStr = sys.argv[1]
 	passwordStr = sys.argv[2]
-	driverPath = sys.argv[3]
+	flag = sys.argv[3]
+	driverPath = sys.argv[4]
 
-	try:
-		# Launch Microsoft Edge (Chromium)
-		options = EdgeOptions()
-		options.use_chromium = True
-		browser = Edge(driverPath, options = options)
+	## flag options 
+	if flag == "-g":
+		try:
+			print(driverPath)
+			browser = webdriver.Chrome(driverPath)
+
+		except WebDriverException as err:
+			print(err)
+			exit()
+
+	elif flag == "-e":
+		try:
+			## Launch Microsoft Edge (Chromium)
+			options = EdgeOptions()
+			options.use_chromium = True
+			browser = Edge(driverPath, options = options)
 	
-	## If the user provides a wrong webdriver name.
-	except WebDriverException as err:
-		if "executable needs to be in PATH" in str(err):
-			print("\"{}\" doesn't exists, make sure you have typed the correct web driver name or path".format(driverPath))
-		exit()
+		## If the user provides a wrong webdriver name.
+		except WebDriverException as err:
+			if "executable needs to be in PATH" in str(err):
+				print("\"{}\" doesn't exists, make sure you have typed the correct web driver name or path".format(driverPath))
+			exit()
+	
 	
 	##enter the daily check-in website
 	browser.get(('http://zyt.zjnu.edu.cn/H5/Login.aspx?op=phone_html5'))
