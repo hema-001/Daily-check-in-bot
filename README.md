@@ -4,12 +4,15 @@
 
 The daily check-in platform is a countermeasure conducted by ZJNU following the events of COVID-19 to observe their students' daily health condition by requiring them to complete an online survey. However, the **daily check-in bot** is a counter-countermeasure for the cumbersome process of checking-in daily by utilizing [selenium](https://www.selenium.dev/) framework.
 
+# Disclaimer
+The script should be used only if the student is feeling well and his current location is around the school. Otherwise, the student should fill in the form according to his current health condition and traveling situation. 
+The author is **not responsible** for any misusage of the script.
+
 # Features!
   - One command, automated check-in process
   - Batch file to create Windows task scheduler
+  - Multiple support for different web drivers
 
-# New features!
-**TBA**
 # To do
   - [ ] Support for Mac OS
   - [ ] Supoort for Linux
