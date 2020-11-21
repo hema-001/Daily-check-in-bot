@@ -13,8 +13,8 @@ The daily check-in platform is a countermeasure conducted by ZJNU following the 
 # To do
   - [ ] Support for Mac OS
   - [ ] Supoort for Linux
-  - [ ] Support for different browsers
-  - [ ] Write more documentation
+  - [x] Support for different browsers
+  - [x] Write more documentation
 
 # Requirements
 In order to run this bot you'll need the following:
@@ -36,41 +36,62 @@ make sure to find your correct MS edge chromium browser build number:
 - **Choose** Help and feedback 
 - and then choose About Microsoft Edge. 
 
+Or, if you are using Google chrome you can check your browser version in the sam fashion as well.
+
 Download the correct [Microsoft WebDriver version](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/) for your build of Microsoft Edge.
-Having the correct version of WebDriver for your build ensures it runs correctly.
+Or, if you prefer Google chrome, Download the correct [Google Chrome driver version](https://chromedriver.chromium.org/downloads) for your build of Google chrome. 
+Having the correct version of WebDriver for your build ensure it runs correctly.
 
 # Running
 #### Running the script
-Running the script itself requires three arguments, `username`, `password`, and `driverPath`. The syntax is as follows:
+Running the script itself requires four arguments, `username`, `password`, `flag`, and `driverPath`. The syntax is as follows:
 ```
-python [username] [password] [driverPath]
+python [username] [password] [flag] [driverPath]
 ```
+`flag` is either `-e` followed by the `driverPath` of MS edge driver, Or `-g` followed by the `driverPath` of Google chrome driver.
 `driverPath` is the absolute path of the web driver file (if the web driver file in a different location than the script, e.g., `D:\dir1\webDriverFile.exe` and the script in `D:\dir2\script.py`),
 ```sh
-> python usernameStr passStr D:\dir1\webDriverFile.exe
+> python usernameStr passStr -g D:\dir1\chromedriver.exe
 ```
 Or the web driver file name, in case the file is in the same working directory.
 ```sh
-> python usernameStr passStr webDriverFile.exe
+> python usernameStr passStr -e msedgedriver.exe
 ```
 #### Running the batch
-Runnig the batch file requires only two arguments, `username` and `password`.
-For the third argument `driverPath`, the batch file is going to locate the web driver in the same working directory (Make sure to put the web driver executable in the same working directory) and provide it in running the script command arguments.
+Runnig the batch file requires only two arguments, `username` and `password`, the default running web driver is Google chrome. However, you can optionally specify which web driver you would like to use by providing a third `flag` argument as the last argument of the command.
+The batch file is going to locate the web driver in the same working directory (Make sure to put the web driver executable in the same working directory) and provide it when running the script command.
+
+**Note**: You don't have to provide the driver path when running the batch file, by default Google chrome driver is used, or you can provide `-e` to run using MS edge.
 
 You can run the script file as follows:
 ```sh
-> do_daily_check_in.bat [username] [password]
+> do_daily_check_in.bat [username] [password] opt[-e|-g]
 ```
+
+For example, running the batch using google chrome driver you can issue the following:
+ ```sh
+ do_daily_check_in.bat usernameStr passStr 
+ ```
+Not specifying a `flag` argument will run the batch file using Google chrome driver.
+
+While you can also add `-e` to run using MS edge driver like the following:
+ ```sh
+ do_daily_check_in.bat usernameStr passStr -e
+ ```
 
 The reason behind this design is that we want to enable the user to set a task scheduler using the batch file with as less overhead as possible.
 Only providing username and password to a task schedluer program is much more convenient than providing a path to a file as well. By letting the batch file do the cumbersome task of providing a correct absolute file path, we can guarantee a minimum error levels that gives the user less problems while setting the daily task.
 ### Releases 
 #### All releases 
 
-* [Daily check-in botv0.1.0_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
-* [Daily check-in botv0.1.1_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
+* [Daily check-in botv0.2.0_msedge_chromium_and_google_chrome](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.2.0)
 * [Daily check-in botv0.1.2_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.2)
-
+* [Daily check-in botv0.1.1_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.1)
+* [Daily check-in botv0.1.0_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
 
 ## Report a bug
 See the following [issue](https://github.com/hema-001/Daily-check-in-bot/issues/3).
+
+## How to contribute
+You can contribute simply by following the standard Feature Branch Workflow [see this helpful tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) to understand how it works. 
+**Note**: you may want to change the word "master" whenever encountered in the above tutorial with "main", since github changed the name of the parent repo from "master" to "main" recently.
