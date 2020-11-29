@@ -49,16 +49,16 @@ Having the correct version of WebDriver for your build ensure it runs correctly.
 #### Running the script
 Running the script itself requires four arguments, `username`, `password`, `flag`, and `driverPath`. The syntax is as follows:
 ```
-python [username] [password] [flag] [driverPath]
+python script.py [username] [password] [flag] [driverPath]
 ```
 `flag` is either `-e` followed by the `driverPath` of MS edge driver, Or `-g` followed by the `driverPath` of Google chrome driver.
 `driverPath` is the absolute path of the web driver file (if the web driver file in a different location than the script, e.g., `D:\dir1\webDriverFile.exe` and the script in `D:\dir2\script.py`),
 ```sh
-> python usernameStr passStr -g D:\dir1\chromedriver.exe
+> python script.py usernameStr passStr -g D:\dir1\chromedriver.exe
 ```
 Or the web driver file name, in case the file is in the same working directory.
 ```sh
-> python usernameStr passStr -e msedgedriver.exe
+> python script.py usernameStr passStr -e msedgedriver.exe
 ```
 #### Running the batch
 Runnig the batch file requires only two arguments, `username` and `password`, the default running web driver is Google chrome. However, you can optionally specify which web driver you would like to use by providing a third `flag` argument as the last argument of the command.
