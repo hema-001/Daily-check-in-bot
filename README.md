@@ -93,7 +93,7 @@ Only providing username and password to a task schedluer program is much more co
 * [Daily check-in botv0.1.0_msedge_chromium](https://github.com/hema-001/Daily-check-in-bot/releases/tag/v0.1.0)
 
 ## Report a bug
-See the following [issue](https://github.com/hema-001/Daily-check-in-bot/issues/3).
+To report a bug go to "Issues", click on "New issue", You'll find a ready "bug report" template select it and follow the template.
 
 ## How to contribute
 You can contribute simply by following the standard Feature Branch Workflow [see this helpful tutorial](https://www.atlassian.com/git/tutorials/comparing-workflows/feature-branch-workflow) to understand how it works. 
